@@ -1,0 +1,9 @@
+---
+
+- name: Copy file
+  copy:
+    src: /root/test_file.txt
+    dest: "{{ file2.dirname }}"
+    owner: "{{ user.login }}"
+    group: "{{ user.group }}"
+    mode: '0644'
