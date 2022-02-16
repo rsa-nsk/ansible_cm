@@ -1,0 +1,31 @@
+---
+- name: Create user and group
+  block:
+    - name: Create group
+      group:
+        name: "{{ user.group }}"
+    - name: Create user
+      user:
+        name: "{{ user.login }}"
+        password: "{{ user.password | password_hash('sha512') }}"
+        shell: /bin/bash
+        group: "{{ user.group }}"
+  rescue:
+    - name: Rollback change if need
+      comand: date
+
+- name: Create a directory
+  file:
+    path: "{{ file.dirname}}"
+    state: directory
+    mode: '0755'
+
+
+- name: Install packages
+  package:
+    name:
+      - htop
+      - iftop
+      - unzip
+      - tree
+    state: latest
