@@ -1,0 +1,11 @@
+---
+user: 
+  login: "tech_user_3"
+  password: "1qaz2wsx"
+  group: "tech3"
+
+file:
+  dirname: /home/tech_user_3/dir123
+  
+file2:
+  dirname: /home/tech_user_3
