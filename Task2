@@ -1,0 +1,12 @@
+ - hosts: all
+   tasks:
+     - name: Create group
+       ansible.builtin.group:
+         name: tech
+         state: present
+     - name: Create user
+       ansible.builtin.user:
+         name: tech_user
+         create_home: yes
+         group: tech
+         password: 1q2w3e
