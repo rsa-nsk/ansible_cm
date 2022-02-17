@@ -1,0 +1,7 @@
+---
+- name: copy_file
+  hosts: linux
+  become: true
+  roles:
+    - role: copy_file 
+      when: default | default('false') == "false"
