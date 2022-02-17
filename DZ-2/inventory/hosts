@@ -1,1 +1,2 @@
-1
+[linux]
+Ubuntu-ANS ansible_ssh_host=10.100.10.45 ansible_ssh_user=root
