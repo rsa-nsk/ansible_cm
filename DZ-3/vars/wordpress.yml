@@ -1,0 +1,5 @@
+---
+server_name: "test-ans.com" # тут ваш домен
+mysql_db: "wordpress"
+mysql_user: "wordpress"
+mysql_password: "WordpreSS0!"
