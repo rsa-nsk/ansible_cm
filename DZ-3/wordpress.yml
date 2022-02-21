@@ -2,9 +2,9 @@
 - hosts: db
 
   vars_files:
-    - /root/.ansible/roles/wordpress/vars/wordpress.yml 
+    - wordpress/vars/wordpress.yml 
   roles:
-    - /etc/ansible/roles/nginx 
+    - nginx 
     - geerlingguy.php
     - geerlingguy.mysql
     - wordpress
