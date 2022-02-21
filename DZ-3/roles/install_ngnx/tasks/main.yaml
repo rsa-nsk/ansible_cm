@@ -1,4 +1,0 @@
-name: Install nginx package
-  package:
-    name: nginx
-    state: installed
