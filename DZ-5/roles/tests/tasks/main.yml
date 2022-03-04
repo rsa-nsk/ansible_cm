@@ -1,0 +1,26 @@
+---
+
+- name: MySQL Check
+  mysql_info:
+    login_user: root
+    login_password: root
+    filter:
+    - version
+    - databases
+
+- name: Check nginx is responsing
+  uri:
+    url: "http://test-ans.com"
+    method: GET
+    status_code: 200
+    timeout: 10
+    use_proxy: no
+    validate_certs: no
+  delegate_to: localhost
+
+- name: Download file
+  get_url:
+    url: http://test-ans.com/wp-content/uploads/2022/03/kodiaq.jpg
+    dest: /For_downloads
+  register: test_download
+  delegate_to: localhost
