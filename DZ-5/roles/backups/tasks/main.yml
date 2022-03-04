@@ -1,0 +1,7 @@
+---
+
+- name: Dump wordpress MySQL databases
+  mysql_db:
+    state: dump
+    name: wordpress
+    target: /backups/wordpress-{{ ansible_date_time.date }}.sql
