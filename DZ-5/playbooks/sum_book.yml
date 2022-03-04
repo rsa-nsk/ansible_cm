@@ -1,0 +1,8 @@
+---
+
+- name: Big Playbook
+  hosts: db
+
+- import_playbook: wordpress.yml
+- import_playbook: test_pb.yml
+
