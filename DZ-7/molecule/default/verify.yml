@@ -1,0 +1,9 @@
+---
+# This is an example playbook to execute Ansible tests.
+
+- name: Verify
+  hosts: all
+  tasks:
+  - name: "Includee test_copy_file"
+    include_role:
+      name: "test_copy_file"
